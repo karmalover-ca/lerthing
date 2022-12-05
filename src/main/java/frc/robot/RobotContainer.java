@@ -7,8 +7,10 @@ package frc.robot;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
+import frc.robot.commands.ConveyorCommand;
 import frc.robot.commands.DriveCommand;
 import frc.robot.commands.instant.ExampleButtonCommand;
+import frc.robot.subsystems.BallTransportSystem;
 import frc.robot.subsystems.Drivetrain;
 
 /**
@@ -41,6 +43,8 @@ public class RobotContainer {
   private void configureButtonBindings() {
     // Make the ExampleButtonCommand run each time the example button is pressed
     OI.exampleButton.whenPressed(new ExampleButtonCommand());
+
+    OI.conveyorButton.whileHeld(new ConveyorCommand(new BallTransportSystem(RobotMap.topTalon2)));
     
     // TODO: Add your button bindings here    
   }

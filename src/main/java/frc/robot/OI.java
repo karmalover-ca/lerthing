@@ -33,7 +33,8 @@ public class OI {
     /** Buttons on the operator controller */
     private static class OperatorButtons {
         /** Button used as example */
-        private static final Button EXAMPLE = XboxController.Button.kA;
+        private static final Button EXAMPLE = XboxController.Button.kB;
+        private static final Button CONVEYOR = XboxController.Button.kA;
     }
 
     // This contains objects for both joystick and controller driving
@@ -54,6 +55,8 @@ public class OI {
 
     /** Button used as example */
     public static final JoystickButton exampleButton = new JoystickButton(operatorController, OperatorButtons.EXAMPLE.value);
+
+    public static final JoystickButton conveyorButton = new JoystickButton(operatorController, OperatorButtons.CONVEYOR.value);
 
 
     // Suppliers for drive inputs

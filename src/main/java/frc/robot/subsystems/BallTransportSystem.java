@@ -30,7 +30,7 @@ public class BallTransportSystem extends SubsystemBase  {
 	 * 
 	 * @param speed intake output percent, [-1, 1]
 	 */
-	public void setSpeed(double speed) {
+	public void setOutput(double speed) {
 		topTalon2.set(ControlMode.PercentOutput, speed);
 	}
 

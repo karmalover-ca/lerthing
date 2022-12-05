@@ -30,8 +30,8 @@ public class IntakeSystem extends SubsystemBase {
 	 * 
 	 * @param speed intake output percent, [-1, 1]
 	 */
-	public void setSpeed(double speed) {
-		topTalon1.set(ControlMode.PercentOutput, speed);
+	public void setOutput(double output) {
+		topTalon1.set(ControlMode.PercentOutput, output);
 	}
 
 	/**
